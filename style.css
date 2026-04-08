@@ -1,7 +1,29 @@
-#alip{
-    font-size: 200px;
-    display: flex;
+
+h1, h3{
+    display : flex;
     justify-content: center;
     text-align: center;
-    color: rgb(0, 120, 78);
+}
+
+#pertama{
+    display : flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    font-size: 20px;
+    font-weight: 550;
+    text-decoration:none;
+    color: black;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: rgba(8, 27, 110, 0.6);
 }
