@@ -25,5 +25,10 @@ a{
 }
 
 a:hover{
-    color: rgba(8, 27, 110, 0.6);
+    color: rgb(104, 104, 104);
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
 }
