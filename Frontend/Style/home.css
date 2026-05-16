@@ -1,0 +1,16 @@
+table.biodata{
+    width: 65%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    border-colapse: colapse;
+    overflow: hidden;
+    padding: 3px;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+}
+
+table.biodata td{
+    padding: 3px;
+}

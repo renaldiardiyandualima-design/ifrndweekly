@@ -1,34 +1,78 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'segoe UI';
+}
 
-h1, h3{
+body{
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.8;
+}
+
+header{
+    background-color: #1e293b;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+    padding: 35px 20px;
+}
+
+header  h1{
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+header h3{
+    font-size: 1rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+table.menu {
+    width: 95%;
+    max-width: 800px;
+    padding: 3px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+table.menu td{
+    border: none;
+    width: 20%;
+    text-align: center;
+    padding: 0px;
+    border-right: 1px solid #e2e8f0;
+}
+
+table.menu td:last-child {
+    border-right: none;
+}
+
+table.menu a{
+    display: block;
+    padding: 10px 14px;
+    color: #475569;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: 0.3s easy-in-out;
+}
+
+table.menu td:hover a{
+    color: #2563eb;
+}
+
+
+h3, #pertama{
     display : flex;
     justify-content: center;
     text-align: center;
-}
-
-#pertama{
-    display : flex;
-    justify-content: center;
-    text-align: center;
-}
-
-.menu{
-    display: flex;
-    justify-content: space-between;
-}
-
-a{
-    font-size: 20px;
-    font-weight: 550;
-    text-decoration:none;
-    color: black;
-    transition: 0.3s;
-}
-
-a:hover{
-    color: rgb(104, 104, 104);
-}
-
-.menu{
-    display: flex;
-    justify-content: center;
 }
