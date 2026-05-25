@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tugas Tabel</title>
 </head>
+
 <body>
     <h2>Tugas</h2>
 
@@ -32,4 +34,5 @@
         </tr>
     </table>
 </body>
+
 </html>

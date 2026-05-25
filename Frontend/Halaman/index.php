@@ -18,19 +18,19 @@
     <table class="menu" border="1" cellspacing="0" cellpadding="9">
         <tr>
             <td>
-                <a href="/Frontend/Halaman/index.html">Home</a>
+                <a href="/Frontend/Halaman/index.php">Home</a>
             </td>
             <td>
-                <a href="/Frontend/Halaman/profile.html">Profile</a>
+                <a href="/Frontend/Halaman/profile.php">Profile</a>
             </td>
             <td>
-                <a href="/Frontend/Halaman/contact.html">Contact</a>
+                <a href="/Frontend/Halaman/contact.php">Contact</a>
             </td>
             <td>
-                <a href="/Frontend/Halaman/mahasiswa.html">Data Mahasiswa</a>
+                <a href="/Frontend/Halaman/mahasiswa.php">Data Mahasiswa</a>
             </td>
             <td>
-                <a href="/Frontend/Halaman/Tugas/tugas.html">Tugas</a>
+                <a href="/Frontend/Halaman/Tugas/tugas.php">Tugas</a>
             </td>
         </tr>
     </table>
@@ -60,4 +60,5 @@
         </tr>
     </table>
 </body>
+
 </html>
