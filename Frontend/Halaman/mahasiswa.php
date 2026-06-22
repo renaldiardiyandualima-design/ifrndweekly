@@ -1,5 +1,21 @@
+<?php 
+    $koneksi = mysqli_connect("localhost", "root", "root", "ifrndweekly");
+    // if(!$koneksi){
+    //   echo mysqli_connect_error();  
+    // }else{
+    //     echo "koneksi berhasil";
+    // }
+
+    $query = "SELECT * FROM mahasiswa";
+    $result = mysqli_query($koneksi, $query);
+
+    // mysqli_fetch_row($result);
+
+    // var_dump($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8">
@@ -36,53 +52,44 @@
     </table>
     <h3>Data Mahasiswa</h3>
     <table class="data" border="0" cellspacing="0" cellpadding="10">
+        <ttr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Nim</th>
+            <th>Jurusan</th>
+            <th>Email</th>
+            <th>No. HP</th>
+            <th>Foto</th>
+            <th>Edit</th>
+
+
+
+        </ttr>
+        <?php 
+        $no = 1;
+
+        while($row = mysqli_fetch_assoc($result)):
+    ?>
         <tr>
-            <th rowspan="2">No</th>
-            <th rowspan="2">Nama Depan </th>
-            <th rowspan="2">Nama Belakang</th>
-            <th rowspan="2">Gambar</th>
-            <th colspan="3">NIlai</th>
-            <th rowspan="2">Kelas</th>
+            <th><?= $no++;?></th>
+            <th><?= $row['nama'];?></th>
+            <th><?= $row['nim']?></th>
+            <th><?= $row['jurusan']?></th>
+            <th><?= $row['email']?></th>
+            <th><?= $row['no_hp']?></th>
+            <th><?= $row['foto']?></th>
+            <th>
+                <a href="ubahData.php?nim=<?= $row['nim']; ?>">
+                    <button>Edit</button>
+                </a>
+
+                <a href="hapusData.php?nim=<?= $row['nim']; ?>"
+                    onclick="return confirm('Yakin ingin menghapus data <?= $row['nama']; ?>?');">
+                    <button>Hapus</button>
+                </a>
+            </th>
         </tr>
-        <tr>
-            <th>UTS</th>
-            <th>UAS</th>
-            <th>Tugas</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Renaldi</td>
-            <td>Ardiyan</td>
-            <td>
-                <img src="/Asset/Image/renaldi.jpeg" alt="renaldi" width="100px" height="150px">
-            </td>
-            <td>A</td>
-            <td>SS</td>
-            <td>S</td>
-            <td rowspan="3">C</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Anam</td>
-            <td>Wibu</td>
-            <td>
-                <img src="/Asset/Image/anam.jpeg" alt="anam" width="100px" height="150px">
-            </td>
-            <td>A</td>
-            <td>SS</td>
-            <td>S</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Sirot</td>
-            <td>Jarot</td>
-            <td>
-                <img src="/Asset/Image/sirot.jpeg" alt="sirot" width="100px" height="150px">
-            </td>
-            <td>A</td>
-            <td>S</td>
-            <td>S</td>
-        </tr>
+        <?php endwhile; ?>
     </table>
     <br>
 
