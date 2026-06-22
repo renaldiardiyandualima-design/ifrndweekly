@@ -1,3 +1,30 @@
+<?php
+    // Pastikan nama file ini sesuai dengan nama file tempat kamu menyimpan fungsi CRUD
+    require 'function.php';
+
+    if(isset($_POST["submit"])){
+        // Mengubah spasi menjadi underscore pada nama untuk menghindari error saat upload
+        $nama_tanpa_spasi = str_replace(' ', '_', $_POST['nama_mhs']);
+        $_FILES['photo']['name'] = $nama_tanpa_spasi . '_' . $_FILES['photo']['name'];
+
+        if (tambahdata($_POST, $_FILES['photo']) > 0){
+            echo "
+                <script>
+                    alert('Data berhasil ditambahkan!');
+                    document.location.href = 'mahasiswa.php';
+                </script>
+            ";
+        } else {
+            echo "
+                <script>
+                    alert('Data gagal ditambahkan!');
+                    document.location.href = 'mahasiswa.php';
+                </script>
+            ";
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
